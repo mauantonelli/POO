@@ -19,6 +19,10 @@ public class Disciplina {
         Collections.addAll(matriculas,m);
     }
 
+    public void removerMatricula(Matricula m){
+        this.matriculas.remove(m);
+    }
+
     public Disciplina(String sigla, String nomeDisciplina, int cargaHoraria) {
         this.sigla = sigla;
         this.nomeDisciplina = nomeDisciplina;

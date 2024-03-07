@@ -18,6 +18,9 @@ public class Aluno {
         Collections.addAll(matriculas,m);
     }
 
+    public void removerMatricula(Matricula m){
+        this.matriculas.remove(m);
+    }
     public Aluno(String nome, String prontuario) {
         this.nome = nome;
         this.prontuario = prontuario;
