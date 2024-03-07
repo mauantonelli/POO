@@ -9,11 +9,13 @@ public class Disciplina {
     private List<Matricula> matriculas= new ArrayList<>();
 
     public void adicionarMatricula(Matricula m){
+
         this.matriculas.add(m);
     }
 
     //Método com quantidade variável de parâmetros
     public void adicionarMatricula(Matricula...m){
+
         Collections.addAll(matriculas,m);
     }
 
