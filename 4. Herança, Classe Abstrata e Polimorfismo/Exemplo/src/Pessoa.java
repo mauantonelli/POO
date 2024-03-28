@@ -5,6 +5,28 @@ public abstract class Pessoa {
     private String telefone;
     private String email;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pessoa pessoa = (Pessoa) o;
+        return Objects.equals(endereco, pessoa.endereco) && Objects.equals(telefone, pessoa.telefone) && Objects.equals(email, pessoa.email);
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "endereco='" + endereco + '\'' +
+                ", telefone='" + telefone + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(endereco, telefone, email);
+    }
+
     //método abstrato. Classes filhas (subclasses) deverão implementá-lo
     public abstract void mostrarDados();
 
