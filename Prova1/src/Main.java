@@ -17,7 +17,7 @@ public class Main {
         System.out.println("\nCursos da categoria "+ prog.getNome());
         prog.exibirCursosPorCategoria();
 
-        Instrutor instrutor = new Instrutor("12345","Instrutor A","222","9999-9999");
+        Instrutor instrutor = new Instrutor("12345","Joaquim","222","9999-9999");
 
         Turma turma1 = new Turma("T1",
                                 LocalDate.of(2024,2,10),
@@ -57,5 +57,9 @@ public class Main {
             for (Curso c : p.obterCursos())
                 System.out.println(c);
         }
+
     }
+
+
+
 }
